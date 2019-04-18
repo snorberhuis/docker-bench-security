@@ -94,7 +94,7 @@ check_1_5() {
   starttestjson "$id_1_5" "$desc_1_5"
 
   totalChecks=$((totalChecks + 1))
-  file="/usr/bin/docker "
+  file="/usr/bin/dockerd"
   if command -v auditctl >/dev/null 2>&1; then
     if auditctl -l | grep "$file" >/dev/null 2>&1; then
       pass "$check_1_5"
